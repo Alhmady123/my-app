@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الطلاب والتكاليف</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <button onclick="showPage('addStudentPage')">إضافة طالب جديد</button>
+        <button onclick="showPage('addAssignmentPage')">إضافة تكليف لطالب</button>
+        <button onclick="showPage('viewAssignmentsPage')">عرض التكاليف</button>
+
+
+         <!-- واجهة إضافة طالب جديد -->
+        <div id="addStudentPage" class="page" style="display: none;">
+             <h2>إضافة طالب جديد</h2>
+             <form id="addStudentForm">
+                 <label for="studentName">اسم الطالب:</label>
+                 <input type="text" id="studentName" required><br>
+                 <label for="studentPhone">رقم الهاتف:</label>
+                 <input type="text" id="studentPhone" required><br>
+                 <button type="submit">إضافة الطالب</button>
+                 <div id="addStudentMessage"></div>
+             </form>
+         </div>
+
+         <!-- واجهة إضافة تكليف لطالب موجود -->
+         <div id="addAssignmentPage" class="page" style="display: none;">
+             <h2>إضافة تكليف لطالب</h2>
+             <form id="addAssignmentForm">
+                 <label for="searchStudentName">اسم الطالب:</label>
+                 <input type="text" id="searchStudentName" required><br>
+                 <div id="studentDetails"></div>
+                 
+                 <label for="assignmentName">اسم التكليف:</label>
+                 <input type="text" id="assignmentName" required><br>
+                 <label for="assignmentPrice">سعر التكليف:</label>
+                 <input type="number" id="assignmentPrice" required><br>
+                 <label for="assignmentStartDate">تاريخ الإرسال:</label>
+                 <input type="date" id="assignmentStartDate" required><br>
+                 <label for="assignmentDueDate">تاريخ التسليم:</label>
+                 <input type="date" id="assignmentDueDate" required><br>
+                 <button type="submit" disabled id="addAssignmentButton">إضافة التكليف</button>
+                 <div id="addAssignmentMessage"></div>
+             </form>
+         </div>
+
+         <!-- واجهة عرض بيانات التكاليف لطالب -->
+         <div id="viewAssignmentsPage" class="page" style="display: none;">
+             <h2>عرض بيانات التكاليف</h2>
+             <form id="viewAssignmentsForm">
+                 <label for="viewStudentName">اسم الطالب:</label>
+                 <input type="text" id="viewStudentName" required><br>
+                 <button type="submit">عرض التكاليف</button>
+                 <div id="assignmentsTable"></div>
+                 <div id="viewAssignmentsMessage"></div>
+             </form>
+         </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

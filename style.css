@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.page {
+    margin-top: 20px;
+    text-align: right; /* محاذاة النصوص لليمين */
+}
+
+.page h2 {
+    margin-bottom: 20px;
+}
+
+.page label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: right; /* محاذاة النصوص لليمين */
+}
+
+.page input, .page textarea, .page select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+.page input[type="number"],
+.page input[type="date"]{
+    text-align: right;
+}
+
+.page button[type="submit"] {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.page button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#assignmentsTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#assignmentsTable th, #assignmentsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#assignmentsTable th {
+    background-color: #f2f2f2;
+}
+
+#assignmentsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+#studentDetails {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: none; /* إخفاء هذا العنصر في البداية */
+  }
+  #studentDetails h4,
+  #studentDetails p{
+    margin: 0px;
+  }
